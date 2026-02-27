@@ -31,5 +31,3 @@ public class Veto {
         return valor;
     }
 }
-
-/* PERDAO NAO MANDAR NO GITHUB FIQUEI COM PREGUIÇA */
