@@ -19,7 +19,7 @@ public class ParImpar {
 
         for(var bernardo : vetor) {
 
-            if(!(vetor.get(bernardo) % 2 == 0)) {
+            if(!(bernardo % 2 == 0)) {
                 impar++;
                 continue;
             }
