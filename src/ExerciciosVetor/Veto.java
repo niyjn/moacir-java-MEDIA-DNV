@@ -31,3 +31,4 @@ public class Veto {
         return valor;
     }
 }
+//nota: so pode errar uma vez, se errar 2 o programa explode
