@@ -8,28 +8,55 @@ vetor e exiba a quantidade de números pares e a
 quantidade de números ímpares (Use if com o
 operador %).*/
 
+class ModuloDe2 {
+    
+    private final ArrayList<Integer> vetor = new ArrayList<>();
+    
+    public void inserir(int n) {
+        this.vetor.add(n);
+    }
+    
+    public void parOuImpar() {
+        
+        int par = 0;
+        int impar = 0;
+        
+        for(int n : vetor) {
+            if(!(n % 2 == 0)) {
+                impar++;
+                continue;
+            } 
+            par++;
+        }
+        
+        System.out.println("Numero de impares: " + impar + "\nNumero de pares: " + par);
+    }
+    
+}
+
 public class ParImpar {
     public static void main(String[] args) {
 
-        ArrayList<Integer> vetor = new ArrayList<>(10);
-        for (int i = 0; i < 10; i++) vetor.add(i);
-
-        var par = 0;
-        var impar = 0;
-
-        for(var bernardo : vetor) {
-
-            if(!(bernardo % 2 == 0)) {
-                impar++;
-                continue;
+        ModuloDe2 conjunto = new ModuloDe2();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite 10 numeros: ");
+        
+        for(int i = 0; i < 10; i++) {
+            boolean burro = false;
+            
+            while(!burro) {
+                
+                try{
+                    conjunto.inserir(scanner.nextInt());    
+                    burro = true;
+                } catch (Exception e) {
+                    System.out.println("Erro. Entrada Invalida.");
+                    scanner.nextLine();
+                }
             }
-                par++;
-
         }
-
-        System.out.println("Quantidade de numeros pares: " + par);
-        System.out.println("Quantidade de numeros impares: " + impar);
+        
+        conjunto.parOuImpar();
     }
 
 }
-
