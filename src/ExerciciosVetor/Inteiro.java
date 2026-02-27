@@ -1,4 +1,3 @@
-package ExerciciosVetor;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -14,10 +13,12 @@ total e qual foi o maior número digitado.*/
         Scanner sfc = new Scanner(System.in);
 
         System.out.println("Digite 5 valores: ");
+            
         addValor(vetor, sfc);
 
         somar(vetor);
 
+        acharMaior(vetor);
 
     }
 
@@ -32,15 +33,38 @@ total e qual foi o maior número digitado.*/
 
     private static void addValor(ArrayList<Integer> vetor, Scanner sfc) {
         for(int i = 0; i < 5; i++) {
-            try {
-                vetor.add(sfc.nextInt());
+            boolean burro = false;
+            
+            while(!burro) {
+                try {
+                int numero = sfc.nextInt();
+                vetor.add(numero);
+                burro = true;
                 System.out.println("Valor adicionado: "+ vetor.get(i));
-            } catch (InputMismatchException e) {
-                sfc.nextLine();
-                System.out.println("Valor adicionado: "+ vetor.get(i));
-                vetor.add(sfc.nextInt());
+                } catch (InputMismatchException e) {
+                    System.out.println("O valor não é valido.");
+                    sfc.nextLine();
+                }
+            }
+        
+        } 
+        
+    }
+    
+    private static void acharMaior(ArrayList<Integer> vetor) {
+        if(vetor.isEmpty()) return;
+        
+        int maior = vetor.get(0);
+        
+        for (int i = 1; i < vetor.size(); i++) {
+            int atual = vetor.get(i);
+            
+            if(atual > maior) {
+                maior = atual;
             }
         }
+        
+        System.out.println("O maior numero é: " + maior);
     }
 
 
