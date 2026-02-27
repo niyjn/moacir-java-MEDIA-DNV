@@ -1,3 +1,4 @@
+package ExerciciosVetor;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
