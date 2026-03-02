@@ -15,8 +15,8 @@ C:.
 └───src
     ├───ExerciciosMedia         (Exercícios de lógica e cálculos)
     ├───ExerciciosPOO           (Projetos aplicando conceitos de POO)
-    ├───ExerciciosVetor         (Exercícios com foco em manipulação de vetores)
-    └───Projeto_Escola          (Sistema CLI para gerenciamento escolar)
+    └───ExerciciosVetor         (Exercícios com foco em manipulação de vetores)
+   
 ```
 
 Essa estrutura modular permite que cada trabalho seja compilado e executado de forma independente, sem interferir nos demais.
