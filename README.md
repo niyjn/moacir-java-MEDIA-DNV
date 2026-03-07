@@ -12,6 +12,10 @@ O código-fonte de todos os projetos está localizado no diretório `src/`. Para
 
 ```
 src/
+├── ExerciciosClasse        (Exercícios de Classes e Encapsulamento)
+│   ├── Animais             (Gestão de Animais e Espécies)
+│   ├── Biblioteca          (Sistema de Livros com Validação de Ano)
+│   └── Notas               (Sistema de Alunos com Saldo de Nota Limitado)
 ├── ExerciciosMedia         (Exercícios de lógica e cálculos)
 ├── ExerciciosPOO           (Projetos aplicando conceitos de POO)
 │   ├── Projeto_Escola      (Sistema de registro escolar)
@@ -27,6 +31,15 @@ Essa estrutura modular permite que cada trabalho seja compilado e executado de f
 ---
 
 ## ✨ O que há de novo?
+
+### 🛠️ Exercícios de Classes (Refatoração & Object Calisthenics)
+
+Foram adicionados novos exercícios na pasta `ExerciciosClasse`, focados em **Encapsulamento Rígido** e na quebra de classes em arquivos individuais para melhor organização.
+
+**Destaques dos novos arquivos:**
+- **Animais:** Organização de classes `Nome`, `Especie` e `Animal` em arquivos separados.
+- **Biblioteca:** Validação rigorosa de `Ano` (não negativo) e `Titulo` através de Value Objects, com testes de exceção no `Main`.
+- **Notas:** Implementação de lógica de **Saldo Acumulado** onde a classe `Nota` gerencia o limite máximo de 10 pontos, impedindo que a soma de notas ultrapasse o teto permitido.
 
 ### 🚀 Exercícios de POO2 (Object Calisthenics & Clean Code)
 
