@@ -16,6 +16,11 @@ src/
 │   ├── Animais             (Gestão de Animais e Espécies)
 │   ├── Biblioteca          (Sistema de Livros com Validação de Ano)
 │   └── Notas               (Sistema de Alunos com Saldo de Nota Limitado)
+├── ExerciciosConstrutor    (Foco em inicialização, Scanner e Desafios)
+│   ├── Leitura.java        (Entrada de dados com Scanner)
+│   ├── ListaRandom.java    (Manipulação de vetores com Random)
+│   ├── Produto.java        (Uso de construtores para objetos)
+│   └── Desafio             (Desafio LivroService com separação de camadas)
 ├── ExerciciosMedia         (Exercícios de lógica e cálculos)
 ├── ExerciciosPOO           (Projetos aplicando conceitos de POO)
 │   ├── Projeto_Escola      (Sistema de registro escolar)
@@ -32,25 +37,23 @@ Essa estrutura modular permite que cada trabalho seja compilado e executado de f
 
 ## ✨ O que há de novo?
 
-### 🛠️ Exercícios de Classes (Refatoração & Object Calisthenics)
+### 🏗️ Exercícios de Construtores e Entrada de Dados
 
-Foram adicionados novos exercícios na pasta `ExerciciosClasse`, focados em **Encapsulamento Rígido** e na quebra de classes em arquivos individuais para melhor organização.
+Adicionada a pasta `ExerciciosConstrutor`, focada na interação com o usuário e inicialização robusta de objetos.
 
 **Destaques dos novos arquivos:**
+- **Leitura & Produto:** Exploração da classe `Scanner` para entrada dinâmica e uso de construtores para garantir que objetos como `Produto` sejam instanciados com estado válido.
+- **ListaRandom:** Geração de dados aleatórios para preenchimento de vetores, facilitando testes de algoritmos.
+- **Desafio (LivroService):** Implementação de um mini-sistema de biblioteca utilizando o padrão **Service**. O `LivroService` centraliza a lógica de negócio, separando a criação de objetos (`Livro`, `Nome`, `Autor`) da persistência na classe `Biblioteca`.
+
+### 🛠️ Exercícios de Classes (Refatoração & Object Calisthenics)
+
+Foram adicionados exercícios na pasta `ExerciciosClasse`, focados em **Encapsulamento Rígido** e na quebra de classes em arquivos individuais.
+
+**Destaques:**
 - **Animais:** Organização de classes `Nome`, `Especie` e `Animal` em arquivos separados.
-- **Biblioteca:** Validação rigorosa de `Ano` (não negativo) e `Titulo` através de Value Objects, com testes de exceção no `Main`.
-- **Notas:** Implementação de lógica de **Saldo Acumulado** onde a classe `Nota` gerencia o limite máximo de 10 pontos, impedindo que a soma de notas ultrapasse o teto permitido.
-
-### 🚀 Exercícios de POO2 (Object Calisthenics & Clean Code)
-
-Recentemente, foram adicionados projetos na pasta `ExerciciosPOO2` com foco em técnicas avançadas de design de software. Estes exercícios foram desenvolvidos aplicando os princípios do **Object Calisthenics** e **Clean Code**, visando criar um código mais legível, testável e de fácil manutenção.
-
-**Destaques das práticas aplicadas:**
--   **Apenas um nível de indentação por método:** Reduzindo a complexidade ciclomática.
--   **Não utilizar o 'ELSE':** Favorecendo o uso de *Early Returns* e polimorfismo.
--   **Encapsulamento de tipos primitivos (Value Objects):** Uso de classes como `Nome`, `RegistroAcademico` e `Periodo` para evitar a obsessão por primitivos.
--   **Classes e métodos pequenos:** Foco total na Responsabilidade Única (SRP).
--   **Coleções de Primeira Classe:** Listas de alunos e professores encapsuladas em suas próprias classes de domínio.
+- **Biblioteca:** Validação rigorosa de `Ano` e `Titulo` através de Value Objects.
+- **Notas:** Lógica de **Saldo Acumulado** onde a classe `Nota` gerencia o limite máximo de 10 pontos.
 
 ---
 
@@ -60,7 +63,7 @@ Para compilar e executar qualquer um dos projetos contidos neste repositório, s
 
 ### Pré-requisitos
 
--   **Java Development Kit (JDK)**: Versão 17 ou superior. Para verificar se você possui o Java instalado, utilize o comando `java -version`.
+-   **Java Development Kit (JDK)**: Versão 17 ou superior.
 
 ### Guia Geral de Execução
 
@@ -72,19 +75,12 @@ Para compilar e executar qualquer um dos projetos contidos neste repositório, s
     ```
 
 3.  **Compile o projeto desejado:**
-    Use o comando `javac`, especificando o nome do pacote (que corresponde ao nome do diretório do projeto) e os arquivos Java que deseja compilar.
-
-    *Exemplo para compilar todos os arquivos do `Projeto_Escola`:*
+    *Exemplo para o Desafio de Construtores:*
     ```sh
-    javac ExerciciosPOO/Projeto_Escola/*.java
+    javac ExerciciosConstrutor/Desafio/Main.java
     ```
 
 4.  **Execute a classe principal:**
-    Após a compilação, use o comando `java` com o nome completo da classe principal (formato: `NomeDoPacote.NomeDaClasse`).
-
-    *Exemplo para executar o `Projeto_Escola`:*
     ```sh
-    java ExerciciosPOO.Projeto_Escola.Main
+    java ExerciciosConstrutor.Desafio.Main
     ```
-
-> **Nota:** O nome da classe principal (aquela que contém o método `public static void main(String[] args)`) pode variar entre os projetos. Verifique o código-fonte do projeto que você deseja executar para encontrá-la.
