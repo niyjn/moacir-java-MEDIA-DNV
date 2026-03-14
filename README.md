@@ -28,7 +28,8 @@ src/
 ├── ExerciciosPOO2          (Sistemas avançados com foco em Clean Code)
 │   ├── Faculdade           (Gestão acadêmica com alta coesão)
 │   └── ProjetoLocadora     (Sistema de locação de filmes)
-└── ExerciciosVetor         (Exercícios com foco em manipulação de vetores)
+├── ExerciciosVetor         (Exercícios com foco em manipulação de vetores)
+└── Lista                   (Coleção de exercícios clássicos de POO)
 ```
 
 Essa estrutura modular permite que cada trabalho seja compilado e executado de forma independente, sem interferir nos demais.
@@ -37,23 +38,12 @@ Essa estrutura modular permite que cada trabalho seja compilado e executado de f
 
 ## ✨ O que há de novo?
 
-### 🏗️ Exercícios de Construtores e Entrada de Dados
+Adicionada uma nova coleção de exercícios no diretório `src/Lista`, focados na modelagem de sistemas do cotidiano utilizando Programação Orientada a Objetos. Os destaques incluem:
 
-Adicionada a pasta `ExerciciosConstrutor`, focada na interação com o usuário e inicialização robusta de objetos.
-
-**Destaques dos novos arquivos:**
-- **Leitura & Produto:** Exploração da classe `Scanner` para entrada dinâmica e uso de construtores para garantir que objetos como `Produto` sejam instanciados com estado válido.
-- **ListaRandom:** Geração de dados aleatórios para preenchimento de vetores, facilitando testes de algoritmos.
-- **Desafio (LivroService):** Implementação de um mini-sistema de biblioteca utilizando o padrão **Service**. O `LivroService` centraliza a lógica de negócio, separando a criação de objetos (`Livro`, `Nome`, `Autor`) da persistência na classe `Biblioteca`.
-
-### 🛠️ Exercícios de Classes (Refatoração & Object Calisthenics)
-
-Foram adicionados exercícios na pasta `ExerciciosClasse`, focados em **Encapsulamento Rígido** e na quebra de classes em arquivos individuais.
-
-**Destaques:**
-- **Animais:** Organização de classes `Nome`, `Especie` e `Animal` em arquivos separados.
-- **Biblioteca:** Validação rigorosa de `Ano` e `Titulo` através de Value Objects.
-- **Notas:** Lógica de **Saldo Acumulado** onde a classe `Nota` gerencia o limite máximo de 10 pontos.
+-   **Bomba de Combustível**: Gerenciamento de abastecimento, preços e controle de estoque de litros.
+-   **Elevador**: Lógica de movimentação entre andares com validação de capacidade e peso.
+-   **Login**: Sistema de autenticação robusto com validação de senha e bloqueio após exceder o limite de tentativas.
+-   **Outros Exercícios**: Modelagem de **Conta Bancária**, **Contato**, **Dado**, **Estoque**, **Lâmpada**, **Playlist** e **Termômetro**, explorando conceitos de encapsulamento e estados de objeto.
 
 ---
 
